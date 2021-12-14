@@ -1,0 +1,12 @@
+{
+  "name": "angularApi",
+  "version": "1.0.0",
+  "descripcion": "Servidor de Api en Node y angular",
+  "author": "Felipe Carloss",
+  "license": "ISC",
+  "dependencies": {
+    "express": "~3.x",
+    "mongoose": "^6.1.1",
+    "nodemon": "^2.0.15"
+  }
+}
