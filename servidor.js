@@ -1,4 +1,4 @@
-
+//Aplicacion REStFUL
 //--------------------------------------------
 //----Configurar un Servidor Local------------
 //Crear variable e importar la libreria Express, Express ya es identificado por el sistema
@@ -12,8 +12,9 @@ var app = expresss();
 // usar el comando npx nodemon.js
 var mongoose = require('mongoose'); // importa la libreria a nuestro servidor
 
-
-//var cors = require("cors");
+//3.9-----------------------
+// Importar Paquete
+var cors = require("cors");
 
 
 mongoose.connect('mongodb://localhost:27017/lista-angular') ;
@@ -34,17 +35,17 @@ app.configure(function(){
     app.use(expresss.methodOverride());
 });
 
-/*
+
+//Nos permite consumir informacion entre diferentes servidores y origenes
+//https://enable-cors.org/server_expressjs.html
+//Instalar paquete npm install cors --save
 app.use(cors());
 app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
+  res.header("Access-Control-Allow-Origin", "*"); //"*" si indico el dominio restrinjo el acceso menos al dominio indicado
+  res.header( "Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept");//Se indica los header basicos que se va aceptar.
   next();
 });  
-*/
+
  
 //video 3.4
 //Crearemos una llamada de tipo Post y la usaremos para configurar una ruta y utilizar los datos que se reciben
